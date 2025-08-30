@@ -12,6 +12,15 @@ public class Tea extends Drink{
 
     @Override
     public String toString() {
-        return "Tea{ name , price, weight}"+this.getName()+","+ this.getPrice()+","+ this.getWeight()  ;
+        return "Drink{" +
+                "name='" + this.getName() + '\'' +
+                ", price=" + this.getPrice() +
+                ", weight=" + this.getWeight() +
+                '}';
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        return super.equals(obj);
     }
 }

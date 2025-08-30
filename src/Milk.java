@@ -1,5 +1,5 @@
 public class Milk extends Drink {
-    public Milk(String name, int price, int weight ) {
+    public Milk(String name, double price, double weight ) {
         super(name, price, weight);
 
     }

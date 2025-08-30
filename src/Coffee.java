@@ -1,5 +1,5 @@
 public class Coffee extends Drink {
-    public Coffee(String name, int price, int weight ) {
+    public Coffee(String name, double price, double weight ) {
         super(name, price, weight);
     }
 
@@ -7,4 +7,7 @@ public class Coffee extends Drink {
     public String getServerInfo(){
         return "Cold or Hot";
     }
+
+
+
 }

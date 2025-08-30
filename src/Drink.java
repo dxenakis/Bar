@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 public abstract class Drink {
     private final String name;
     private final double price;
@@ -37,6 +39,26 @@ public abstract class Drink {
         return null;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Drink drink = (Drink) o;
+        return Double.compare(price, drink.price) == 0 && Double.compare(weight, drink.weight) == 0 && Objects.equals(name, drink.name);
+    }
 
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, price, weight);
+    }
+
+    @Override
+    public String toString() {
+        return "Drink{" +
+                "name='" + name + '\'' +
+                ", price=" + price +
+                ", weight=" + weight +
+                '}';
+    }
 }
 
