@@ -18,7 +18,18 @@ public class Main {
         drinkList.add(beer);
         drinkList.add(new Tea("Tea",10.0,10.0));
         drinkList.add(new Coffee("Coffee",10.0,100.0));
+
+        // μέθοδος forEach του Iterable interface που υλοποιεί το List με χρήση lambda exp.
         drinkList.forEach(drink -> System.out.println(drink));
+        drinkList.forEach(System.out::println);
+        //Κλασσικό iteration με for look
+        for (Drink i : drinkList){
+            System.out.println(i);
+        }
+
+
+
+
 
     }
 }
